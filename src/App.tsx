@@ -1,24 +1,24 @@
-import sofa from './assets/01sofa.png'
-import './App.css'
-import './index.css'
-import Navbar from './components/Navbar'
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import './index.css';
+
+// Remove the .tsx extensions from the file paths completely
+import Navbar from './components/Navbar';
+import Studio from './pages/StudioPage';
+import Page01 from './pages/01Page';           
+import CollectionPage from './pages/CollectionPage'; 
+import JournalPage from './pages/JournalPage';   
 
 export default function App() {
   return (
     <>
-    <div className="background">
-      <Navbar/>
-        <section className="hero">
-          <img src={sofa} alt="sofa" style={{ width: '90%' }}/>
-        </section>
-        
-        <section className='top'>
-          <h1 className="font-cormorantGaramond primary text-h2">
-            VAREL
-          </h1>
-          <p className="font-canela secondary text-h2">OBJECTS OF PERMANENCE</p>
-        </section>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Studio />} />
+        <Route path="/01" element={<Page01 />} />
+        <Route path="/collection" element={<CollectionPage />} />
+        <Route path="/journal" element={<JournalPage />} />
+      </Routes>
     </>
-  )
+  );
 }
