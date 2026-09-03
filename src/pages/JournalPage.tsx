@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 export default function JournalPage() {
   return (
     <div className="background">
@@ -10,6 +12,7 @@ Why we removed everything unnecessary.
 
 MILAN / 2026
 Inside the new collection.</p>
+<Footer/>
     </div>
   );
 }

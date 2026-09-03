@@ -3,6 +3,8 @@ import table from '../assets/01table.png';
 import sofa2 from '../assets/02sofa.jpg';
 import type { CSSProperties } from 'react';
 import { DiscoverButton } from '../components/DiscoverButton';
+import { Footer } from '../components/Footer';
+
 
 export default function StudioPage() {
   return (
@@ -52,6 +54,7 @@ export default function StudioPage() {
           </div>
         </div>
       </section>
+      <Footer/>
     </div>
   );
 }

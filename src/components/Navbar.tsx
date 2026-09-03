@@ -18,7 +18,7 @@ export default function Navbar() {
       top: 0,
       zIndex: 100 
     }}>
-      <ul className='Canela' style={{ display: 'flex', justifyContent: 'space-between', listStyle: 'none' }}>
+      <ul className='Canela' style={{ display: 'flex', justifyContent: 'center', listStyle: 'none', gap: '150px', margin: 0, padding: 0 }}>
         {links.map((link) => (
           <li key={link.label}>
             <Link to={link.url} className='white' style={{ textDecoration: 'none' }}>
