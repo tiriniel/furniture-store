@@ -1,26 +1,42 @@
 import type { CSSProperties } from 'react';
 import Footer from "../components/Footer";
+import coffieTable from '../assets/coffieTable02.webp';
+import chair from '../assets/chair01.webp';
 
 export default function JournalPage() {
   return (
     <div className="background">
       <section style={styles.hero}>
-        <h1 className='primary font-cormorantGaramond text-h2' style={{padding: '40px'}}>ABOUT THE PROJECT</h1>
+        <h2 className='primary font-cormorantGaramond text-h2' style={{padding: '40px'}}>ABOUT THE PROJECT</h2>
         <p className='primary font-cormorantGaramond text-lg'> VAREL is a fictional international furniture and design brand created as a frontend development project.
             The concept combines luxury furniture, brutalist architecture and editorial fashion direction into one digital experience.
             The goal was to create a website that feels like a design house rather than a traditional online furniture store.</p>
+          <div style={styles.imageSection}>
+            <img
+              src={coffieTable}
+              alt="coffie table"
+              style={{width: '20rem',
+                      height: '20rem',
+                      objectFit: 'cover',
+                      paddingTop: '60px'}}/>
+              <img
+              src={chair}
+              alt="chair"
+              style={{width: '20rem',
+                      height: '20rem',
+                      objectFit: 'cover',
+                      paddingTop: '60px'}}/>
+            </div>
       </section>
       <section className='primary' style={styles.sectionCenter}>
-        <h2>PROJECT TYPE</h2>
-        <span>Fictional luxury furniture brand</span>
-        <h2>ROLE</h2>
-        <span>Frontend developer</span>
-        <h2>OBJECTIVE</h2>
-        <p>Create a high-end, editorial website that communicates quality through typography,spacing, imagery and interaction.</p>
-        <h2>DESIGN DIRECTION</h2>
-        <span>Raw & architectural</span>
-        <h2>DESIGN DIRECTION</h2>
-        <p>The visual identity is built around contrast: hard architectural forms and warm natural materials. The layout uses 
+        <h3 className='text-h3'>PROJECT TYPE</h3>
+        <span className='text-lg'>Fictional luxury furniture brand</span>
+        <h3 className='text-h3'>ROLE</h3>
+        <span className='text-lg'>Frontend developer</span>
+        <h3 className='text-h3'>OBJECTIVE</h3>
+        <p className='text-lg'>Create a high-end, editorial website that communicates quality through typography,spacing, imagery and interaction.</p>
+        <h3 className='text-h3'>DESIGN DIRECTION</h3>
+        <p className='text-lg'>The visual identity is built around contrast: hard architectural forms and warm natural materials. The layout uses 
           oversized typography, asymmetrical grids, sharp edges and generous negative space. The interface avoids unnecessary 
           decoration. Every element is designed to feel intentional, quiet and precise.</p>
         </section>
@@ -74,6 +90,14 @@ const styles: Record<string, CSSProperties> = {
     textAlign:'center',
     padding: '6% 8%',
   },
+  imageSection:{
+     display: 'flex',
+    flexDirection: 'row',
+    gap: '2rem',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+  },
   sectionCenter:{
     display: 'flex',
     flexDirection:'column',
@@ -81,5 +105,6 @@ const styles: Record<string, CSSProperties> = {
     alignItems: 'center',
     textAlign:'center',
     padding: '2% 20%',
+    gap: '50px',
   },
 }
