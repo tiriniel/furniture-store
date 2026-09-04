@@ -1,12 +1,12 @@
 import type { CSSProperties } from 'react';
 import { Footer } from '../components/Footer';
-import bed from '../assets/01bed.webp';
+import table2 from '../assets/01table2.jpg';
 import dinnerTable from '../assets/01dinnerTable.jpg';
 
 export default function Page01() {
   return (
     <div className="background">
-      <h1 className='secondary font-cormorantGaramond text-h3' style={styles.sectionCenter}>01 / NEW ARRIVAL</h1>
+      <h1 className='primary font-cormorantGaramond text-h3' style={styles.sectionCenter}>01 / NEW ARRIVAL</h1>
       <section style={styles.productSection}>
         <img
             src={dinnerTable}
@@ -26,16 +26,18 @@ export default function Page01() {
         <h4 className='primary'>A study of mass, texture and permanence</h4>
         <p className='primary'>NEW COLLECTION · 2026</p>
       </section>
-      <p className='primary'>The surface is never perfectly still. Small variations in tone, grain and temperature 
-        give each piece its own character. These details are not imperfections. They are evidence of origin.
-        We work with materials that become more present with time. Stone that develops depth, metal that
-        changes through touch, and wood that records use. The object does not need to compete with its material.
-        It exists to reveal it.</p>
-         <img
-          src={bed}
-          alt="bed"
-          style={styles.productSection}
-        />
+      <section style={styles.productSection}>
+        <p className='primary' style={styles.content}>The surface is never perfectly still. Small variations in tone, grain and temperature 
+          give each piece its own character. These details are not imperfections. They are evidence of origin.
+          We work with materials that become more present with time. Stone that develops depth, metal that
+          changes through touch, and wood that records use. The object does not need to compete with its material.
+          It exists to reveal it.</p>
+          <img
+            src={table2}
+            alt="table"
+            style={{width: '40rem'}}
+          />
+        </section>
      <Footer/>
     </div>
   );
